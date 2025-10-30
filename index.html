@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Invitación a mis 15 años - Cenicienta</title>
-<link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Quicksand:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Quicksand:wght@400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <style>
     * {
@@ -12,6 +12,7 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Montserrat', sans-serif;
       background: repeat top left;
@@ -46,8 +47,8 @@
     }
 
     @keyframes flutter {
-      from {background-position: 0 0;}
-      to {background-position: 1000px 1000px;}
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
     }
 
     header {
@@ -64,13 +65,15 @@
       text-shadow: 2px 2px 5px #555;
       animation: sparkle 2s infinite alternate;
     }
-header h2 {
+
+    header h2 {
       font-family: 'Great Vibes', cursive;
-      font-size:34px;
+      font-size: 34px;
       margin-bottom: 10px;
       text-shadow: 2px 2px 5px #555;
       animation: sparkle 2s infinite alternate;
     }
+
     header p {
       font-size: 22px;
       background-color: rgba(0, 0, 0, 0.4);
@@ -78,6 +81,7 @@ header h2 {
       padding: 10px 20px;
       border-radius: 10px;
       animation: fadeInText 3s ease-in-out;
+      line-height: 1.5; /* Añadido para mejor lectura */
     }
 
     .section {
@@ -85,12 +89,22 @@ header h2 {
       padding: 50px 20px;
     }
 
+    .section h1 { /* Añadido para "Detalles del Evento" */
+      font-family: 'Great Vibes', cursive;
+      font-size: 60px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #555;
+      animation: sparkle 2s infinite alternate;
+      color: white;
+    }
+
     .section h2 {
-   font-family: 'Great Vibes', cursive;
+      font-family: 'Great Vibes', cursive;
       font-size: 54px;
       margin-bottom: 10px;
       text-shadow: 2px 2px 5px #555;
       animation: sparkle 2s infinite alternate;
+      color: white; /* Añadido color */
     }
 
     .countdown {
@@ -107,40 +121,42 @@ header h2 {
 
     iframe {
       border: none;
-      width: 90%;
+      width: 90%; /* Ajustado para ser más responsivo */
+      max-width: 600px; /* Límite para pantallas grandes */
       height: 300px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.25);
+      margin-top: 20px; /* Añadido espacio */
     }
 
     .details p {
-       font-family: 'Great Vibes', cursive;
-  font-size: 40px;
-  padding: 40px;
-  margin: 10px auto;
-  width: 40%;
-  animation: fadeInUp 2s ease;
-  color: #ffffff;
+      font-family: 'Great Vibes', cursive;
+      font-size: 40px;
+      padding: 20px; /* Reducido */
+      margin: 10px auto;
+      width: 90%; /* CORREGIDO: 40% era muy poco */
+      max-width: 600px; /* Límite para pantallas grandes */
+      animation: fadeInUp 2s ease;
+      color: #ffffff;
+      line-height: 1.6; /* Añadido para que no se peguen las líneas */
     }
 
     .family {
-  font-family: 'Great Vibes' 
-  font-size: 80px;
-  padding: 50px;
-  margin: 40px auto;
-  width: 50%;
-  animation: fadeInUp 2s ease;
-  color: #ffffff;
-}
-
-     
-
+      /* Esta regla estaba causando problemas */
+      padding: 20px; /* Reducido */
+      margin: 20px auto;
+      width: 90%; /* CORREGIDO */
+      max-width: 700px;
+      animation: fadeInUp 2s ease;
+      color: #ffffff;
     }
 
-    .family h3 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 50px;
-      color: #e066a3;
+    .family p {
+      /* Esta regla es NUEVA para los nombres */
+      font-family: 'Montserrat', sans-serif; /* Cambiado de 'Great Vibes' */
+      font-size: 20px; /* CORREGIDO: 80px era demasiado */
+      line-height: 1.7;
+      color: white;
     }
 
     form {
@@ -168,25 +184,76 @@ header h2 {
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-30px);}
-      to {opacity: 1; transform: translateY(0);}
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInText {
-      from {opacity: 0;}
-      to {opacity: 1;}
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes sparkle {
       0% { text-shadow: 0 0 5px #fff, 0 0 10px #ffccff; }
       100% { text-shadow: 0 0 15px #ffc0cb, 0 0 25px #fff0f5; }
     }
+
+    /* ========================================= */
+    /* === AQUÍ ESTÁ LA MAGIA PARA CELULARES === */
+    /* ========================================= */
+
+    @media (max-width: 768px) {
+      
+      header {
+        padding: 40px 10px 20px; /* Menos espacio */
+      }
+
+      header h1 {
+        font-size: 48px; /* Más pequeño */
+      }
+      
+      header p {
+        font-size: 18px; /* Más pequeño */
+      }
+      
+      .section {
+        padding: 30px 10px; /* Menos espacio */
+      }
+
+      .section h1 {
+        font-size: 44px; /* Más pequeño */
+      }
+
+      .section h2 {
+        font-size: 40px; /* Más pequeño */
+      }
+
+      .countdown {
+        font-size: 18px; /* Más pequeño */
+        padding: 10px 15px;
+      }
+      
+      .details p {
+        font-size: 32px; /* Más pequeño */
+        width: 95%;
+      }
+
+      .family p {
+        font-size: 16px; /* Más pequeño */
+      }
+
+      iframe {
+        width: 95%;
+        height: 250px;
+      }
+    }
   </style>
+
 </head>
 <body>
 
@@ -197,64 +264,65 @@ header h2 {
   <div id="butterflies"></div>
 
   <header>
-    <h1>Mis 18 Años </h1>
-<h1>Jessica Nataly Leon Cruz </h1>
+    <h1>Mis 18 Años</h1> <h1>Jessica Nataly Leon Cruz</h1>
     <p>Con mucho amor, te invito a celebrar un día muy especial en mi vida.<br>¡Mis XV años al estilo de un cuento de hadas con Cenicienta!</p>
   </header>
 
-  <!-- BOTÓN DE MÚSICA -->
   <div style="text-align: center; margin-top: 20px;">
     <button id="playMusicBtn" style="padding: 12px 20px; font-size: 16px; border-radius: 10px; background-color: #ffb6c1; color: white; border: none; cursor: pointer;">
       ▶️ Reproducir Música
     </button>
-     <script>
-    const music = document.getElementById('bgMusic');
-    const btn = document.getElementById('playMusicBtn');
-
-    btn.addEventListener('click', () => {
-      music.play();
-      btn.style.display = 'none';
-    });
     <audio id="bgMusic" loop>
       <source src="love.mp3" type="audio/mpeg" />
       Tu navegador no soporta audio HTML5.
     </audio>
   </div>
-</script>
 
-<header>
-<div class="section family">
+  <div class="section family">
     <h2>Con cariño de:</h2>
-    <p>Papás:Guadalupe Cecilia Cruz Aguilar & Jonathan Nava Granados<br>
-      Padrinos:Acacio Avilez Ramirez & Monica Rayas Esencia<br></p>
+    <p>Papás: Guadalupe Cecilia Cruz Aguilar & Jonathan Nava Granados<br>
+      Padrinos: Acacio Avilez Ramirez & Monica Rayas Esencia<br></p>
   </div>
-</header>
+
   <div class="section">
     <h2>Cuenta regresiva para el gran día</h2>
     <div class="countdown" id="countdown"></div>
   </div>
 
- 	<header >
   <div class="section">
     <h1>Detalles del Evento</h1>
     <div class="details">
-      <p>Fecha:22 de noviembre de 2025<br> 
-        Hora:7:00 PM <br>
+      <p>Fecha: 22 de noviembre de 2025<br>
+        Hora: 7:00 PM <br>
         Lugar: Calle mina MZ 4 LT 10<br></p>
-      </header>
     </div>
-  </div> 
-
+  </div>
 
   <div class="section">
     <h2>Ubicación de la fiesta</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d859.3826774170138!2d-98.99790980498601!3d19.639311810930607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1761099480208!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
   <div class="section">
     <h2>Ubicacion de la misa</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.8711764441977!2d-98.9980733606432!3d19.629913046878844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ede210531c87%3A0xdf7191955f3a3f55!2sParroquia%20de%20la%20Natividad%20de%20Mar%C3%ADa%2C%20Di%C3%B3cesis%20de%20Ecatepec%2C%20A.%20R.!5e0!3m2!1ses!2smx!4v1761785577171!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.8711764441977!2d-98.9980733606432!3d19.629913046878844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ede210531c87%3A0xdf7191955f3a3f55!2sParroquia%20de%20la%20Natividad%20de%20Mar%C3%ADa%2C%20Di%C3%B3cesis%20de%20Ecatepec%2C%20A.%20R.!5e0!3m2!1ses!2smx!4v1761785577171!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const btn = document.getElementById('playMusicBtn');
+
+    if (btn && music) {
+      btn.addEventListener('click', () => {
+        music.play();
+        btn.style.display = 'none';
+      });
+    }
+  </script>
+
   <script>
     const countdown = document.getElementById('countdown');
-    const eventDate = new Date('noviembre 22, 2025 18:00:00').getTime();
+    const eventDate = new Date('November 22, 2025 19:00:00').getTime(); // Asegúrate que la hora coincida (7:00 PM = 19:00)
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -265,7 +333,7 @@ header h2 {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdown.innerHTML = `${days} días ${hours} horas ${minutes} minutos ${seconds} segundos`;
+      countdown.innerHTML = ${days} días ${hours} horas ${minutes} minutos ${seconds} segundos;
 
       if (distance < 0) {
         clearInterval(timer);
@@ -273,5 +341,6 @@ header h2 {
       }
     }, 1000);
   </script>
+
 </body>
 </html>
